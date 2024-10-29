@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Overlay</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+
+        .rectangle {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+        }
+
+        .red {
+            background-color: red;
+            left: 0;
+            position: absolute;
+            width: 100px;
+            height: 200px;
+        }
+
+        .green {
+            background-color: green;
+            right: 0;
+            position: absolute;
+            width: 100px;
+            height: 200px;
+        }
+
+        .black1 {
+            margin-left: 60px;
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            background-color:black;
+            transform: rotate(35deg);
+        }
+        .black2 {
+            margin-right: 60px;
+            margin-bottom: 100px;
+            right: 0;
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            background-color:black;
+            transform: rotate(145deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class=" red"></div>
+        <div class=" green"></div>
+        <div class=" black1"></div>
+        <div class=" black2"></div>
+    </div>
+</body>
+</html>
