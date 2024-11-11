@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f8f9fa;
+      
+    }
+
+    nav {
+      background-color: white;
+      padding: 1rem;
+      transition: background-image 0.3s;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+            
+    }
+    nav:hover {
+  background-image: url('new.jpg');
+}
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .logo span {
+      color: #007bff;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      margin-left: 2rem;
+      position: relative;
+    }
+
+    a {
+      text-decoration: none;
+      color: #6c757d;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      color: #000;
+    }
+
+    .signin {
+      padding: 0.5rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      color: #6c757d;
+      font-weight: 500;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .Signin:hover {
+      background-color: #f1f1f1;
+      color: #000;
+    }
+
+    .Register {
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      background-color: #007bff;
+      color: white;
+      font-weight: 500;
+      margin-left: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .Register:hover {
+      background-color: #0056b3;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 200px;
+    }
+
+    .dropdown li {
+      display: block;
+    }
+
+    li:hover .dropdown {
+      display: block;
+    }
+    img{
+    display:none;
+    }
+    @media (max-width: 900px) 
+    {
+        ul
+        {
+            flex-direction: column;
+            display: none;
+            align-items: flex-start;
+            width: 100%;
+        }
+        img{
+            display: block;
+            
+        }
+        .NewUser
+        {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+        
+      <a href="#" class="logo">Launch<span>.</span></a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li>
+          <a href="#">Dropdown 🔽</a>
+          <ul class="dropdown">
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#">Menu Two</a></li>
+            <li><a href="#">Menu Three</a></li>
+          </ul>
+        </li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="NewUser">
+        <a href="#" class="Signin">Sign in</a>
+        <a href="#" class="Register">Register</a>
+        <img src="hamburger.svg">
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
